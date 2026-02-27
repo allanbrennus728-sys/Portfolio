@@ -1,0 +1,62 @@
+name: Deploy HTML via FTP (FTPS) to O2switch
+ 
+on:
+
+  push:
+
+    branches: ["main"]
+ 
+concurrency:
+
+  group: deploy-ftp-o2switch
+
+  cancel-in-progress: true
+ 
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+ 
+    steps:
+
+      - name: Checkout
+
+        uses: actions/checkout@v4
+ 
+      - name: Deploy to FTP (FTPS)
+
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+
+        with:
+
+          server: ${{ secrets.FTP_SERVER }}
+
+          username: ${{ secrets.FTP_USERNAME }}
+
+          password: ${{ secrets.FTP_PASSWORD }}
+ 
+          # O2switch: privilégier FTPS explicite
+
+          protocol: ftps
+
+          security: loose
+ 
+          # Dossier distant
+
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+ 
+          # Important: ne déploie pas les dossiers GitHub/Git
+
+          exclude: |
+
+            **/.git*
+
+            **/.github/**
+
+            **/node_modules/**
+
+            **/.env
+
+            **/README.md
+ 
