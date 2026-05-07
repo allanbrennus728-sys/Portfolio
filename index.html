@@ -191,12 +191,12 @@
     </div>
   </section>
 
-    <!-- Projets -->
+      <!-- Projets -->
   <div class="alt-bg" id="projets">
     <section class="section">
       <h2>Projet Réalisé</h2>
-      <!-- Le conteneur grid qui aligne et centre les cartes -->
-      <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+      <!-- J'ai enlevé la restriction max-width: 600px pour permettre aux cartes de se mettre côte à côte -->
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         
         <!-- CARTE 1 : Baie de brassage -->
         <a class="card card-link" href="#documentation-baie">
@@ -208,7 +208,7 @@
         <!-- CARTE 2 : Centreon -->
         <a class="card card-link" href="#documentation-centreon">
           <h3>📊 Déploiement de la supervision Centreon</h3>
-          <p>Installation et configuration complète d'une solution de supervision Centreon. Intégration des équipements réseau via SNMP, paramétrage des remontées d'alertes et création de tableaux de bord pour le suivi de l'infrastructure.</p>
+          <p>Installation et configuration complète d'une solution de supervision Centreon. Intégration des équipements réseau via SNMP, paramétrage des remontées d'alertes et création de tableaux de bord.</p>
           <p class="cta">Voir la documentation détaillée ➔</p>
         </a>
 
@@ -216,13 +216,23 @@
     </section>
   </div>
 
-  <!-- NOUVELLE SECTION : Documentation Baie (Placeholder) -->
+    <!-- Documentation Baie de brassage (existante) -->
   <section id="documentation-baie" class="section">
     <h2>Documentation — Baie de brassage</h2>
     <p class="intro">La documentation complète détaillant la mise en œuvre de la baie de brassage sera ajoutée ici très prochainement.</p>
     <div class="card" style="text-align: center; padding: 3rem;">
       <h3 style="color: var(--muted); font-size: 1.5rem;">⏳ Documentation en cours de rédaction...</h3>
       <p style="margin-top: 1rem;">Revenez bientôt pour consulter les schémas, le plan de câblage, les photos de l'installation et les résultats des tests.</p>
+    </div>
+  </section>
+
+  <!-- NOUVELLE SECTION : Documentation Centreon -->
+  <section id="documentation-centreon" class="section">
+    <h2>Documentation — Centreon</h2>
+    <p class="intro">La documentation complète sur le déploiement et la configuration de la supervision Centreon sera ajoutée ici très prochainement.</p>
+    <div class="card" style="text-align: center; padding: 3rem;">
+      <h3 style="color: var(--muted); font-size: 1.5rem;">⏳ Documentation en cours de rédaction...</h3>
+      <p style="margin-top: 1rem;">Revenez bientôt pour consulter la configuration SNMP, les tableaux de bord et les alertes mises en place.</p>
     </div>
   </section>
 
