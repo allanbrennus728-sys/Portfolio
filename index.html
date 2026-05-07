@@ -191,36 +191,30 @@
     </div>
   </section>
 
-  <!-- Projets (Modifié) -->
+    <!-- Projets -->
   <div class="alt-bg" id="projets">
     <section class="section">
       <h2>Projet Réalisé</h2>
-      <!-- On limite la largeur pour que la carte unique ne soit pas trop étirée -->
+      <!-- Le conteneur grid qui aligne et centre les cartes -->
       <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+        
+        <!-- CARTE 1 : Baie de brassage -->
         <a class="card card-link" href="#documentation-baie">
           <h3>🗄️ Mise en œuvre d'une baie de brassage</h3>
           <p>Installation, organisation et câblage complet d'une baie de brassage informatique. Respect des normes de câblage, repérage, brassage et tests de connectivité réseau.</p>
           <p class="cta">Voir la documentation détaillée ➔</p>
         </a>
-      </div>
-      <!-- Première carte existante (Baie de brassage) -->
-<!-- ... ton code existant ... -->
 
-<!-- Deuxième carte (Centreon) à placer juste en dessous -->
-<div class="project-card"> <!-- Remplace "project-card" par le VRAI nom de classe de ta première carte -->
-    <div class="project-header"> <!-- Remplace aussi par la vraie classe -->
-        <span class="project-icon">📊</span> 
-        <h3 class="project-title">Déploiement de la supervision Centreon</h3>
-    </div>
-    
-    <p class="project-description">
-        Installation et configuration complète d'une solution de supervision Centreon. 
-        Intégration des équipements réseau via SNMP, paramétrage des remontées d'alertes 
-        et création de tableaux de bord pour le suivi de l'infrastructure.
-    </p>
-    
-    <a href="lien-vers-ta-doc-centreon.html" class="project-link">Voir la documentation détaillée ➔</a>
-</div>
+        <!-- CARTE 2 : Centreon -->
+        <a class="card card-link" href="#documentation-centreon">
+          <h3>📊 Déploiement de la supervision Centreon</h3>
+          <p>Installation et configuration complète d'une solution de supervision Centreon. Intégration des équipements réseau via SNMP, paramétrage des remontées d'alertes et création de tableaux de bord pour le suivi de l'infrastructure.</p>
+          <p class="cta">Voir la documentation détaillée ➔</p>
+        </a>
+
+      </div>
+    </section>
+  </div>
 
   <!-- NOUVELLE SECTION : Documentation Baie (Placeholder) -->
   <section id="documentation-baie" class="section">
