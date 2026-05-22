@@ -191,50 +191,29 @@
     </div>
   </section>
 
-      <!-- Projets -->
+  <!-- Projets -->
   <div class="alt-bg" id="projets">
     <section class="section">
-      <h2>Projet Réalisé</h2>
-      <!-- J'ai enlevé la restriction max-width: 600px pour permettre aux cartes de se mettre côte à côte -->
+      <h2>Projets Réalisés</h2>
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         
-        <!-- CARTE 1 : Baie de brassage -->
-        <a class="card card-link" href="#documentation-baie">
-          <h3>🗄️ Mise en œuvre d'une baie de brassage</h3>
-          <p>Installation, organisation et câblage complet d'une baie de brassage informatique. Respect des normes de câblage, repérage, brassage et tests de connectivité réseau.</p>
+        <!-- CARTE 1 : Infrastructure Vénus -->
+        <a class="card card-link" href="Projet-1.pdf" target="_blank" rel="noopener noreferrer">
+          <h3>🗄️ Conception de l'infrastructure Vénus</h3>
+          <p>Conception et déploiement de l'infrastructure réseau de la SARL Fantôme : installation de Proxmox, configuration du cœur de réseau Cisco, déploiement d'un pare-feu FortiGate et mise en place d'un tunnel VPN IPsec.</p>
           <p class="cta">Voir la documentation détaillée ➔</p>
         </a>
 
-        <!-- CARTE 2 : Centreon -->
-        <a class="card card-link" href="#documentation-centreon">
-          <h3>📊 Déploiement de la supervision Centreon</h3>
-          <p>Installation et configuration complète d'une solution de supervision Centreon. Intégration des équipements réseau via SNMP, paramétrage des remontées d'alertes et création de tableaux de bord.</p>
+        <!-- CARTE 2 : GLPI -->
+        <a class="card card-link" href="Projet-2.pdf" target="_blank" rel="noopener noreferrer">
+          <h3>📊 Déploiement GLPI & Active Directory</h3>
+          <p>Déploiement de la solution ITSM GLPI sous Debian 12 avec la pile LAMP. Sécurisation de la base de données MariaDB et intégration avec l'annuaire Active Directory (LDAP) pour l'authentification des utilisateurs.</p>
           <p class="cta">Voir la documentation détaillée ➔</p>
         </a>
 
       </div>
     </section>
   </div>
-
-    <!-- Documentation Baie de brassage (existante) -->
-  <section id="documentation-baie" class="section">
-    <h2>Documentation — Baie de brassage</h2>
-    <p class="intro">La documentation complète détaillant la mise en œuvre de la baie de brassage sera ajoutée ici très prochainement.</p>
-    <div class="card" style="text-align: center; padding: 3rem;">
-      <h3 style="color: var(--muted); font-size: 1.5rem;">⏳ Documentation en cours de rédaction...</h3>
-      <p style="margin-top: 1rem;">Revenez bientôt pour consulter les schémas, le plan de câblage, les photos de l'installation et les résultats des tests.</p>
-    </div>
-  </section>
-
-  <!-- NOUVELLE SECTION : Documentation Centreon -->
-  <section id="documentation-centreon" class="section">
-    <h2>Documentation — Centreon</h2>
-    <p class="intro">La documentation complète sur le déploiement et la configuration de la supervision Centreon sera ajoutée ici très prochainement.</p>
-    <div class="card" style="text-align: center; padding: 3rem;">
-      <h3 style="color: var(--muted); font-size: 1.5rem;">⏳ Documentation en cours de rédaction...</h3>
-      <p style="margin-top: 1rem;">Revenez bientôt pour consulter la configuration SNMP, les tableaux de bord et les alertes mises en place.</p>
-    </div>
-  </section>
 
   <!-- Veille Technologique -->
   <div class="alt-bg" id="veille">
@@ -282,38 +261,4 @@
     <h2>Me Contacter</h2>
     <form class="contact-form">
       <input type="text" placeholder="Votre nom" required>
-      <input type="email" placeholder="Votre email" required>
-      <textarea rows="5" placeholder="Votre message..." required></textarea>
-      <button type="submit" class="btn">Envoyer le message</button>
-    </form>
-    <p style="text-align:center; color:var(--muted);">
-      📍 Saint-Marie, La Réunion (97438)<br>
-      📧 allan.brennus72@gmail.com &bull; 📱 06 92 00 73 25
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Allan Brennus &mdash; Portfolio BTS SIO SISR &bull; Saint-Denis, La Réunion</p>
-  </footer>
-
-  <script>
-    // Script pour le défilement fluide (smooth scroll)
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-
-    // Alerte formulaire de contact
-    document.querySelector('.contact-form').addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Message envoyé ! Merci de me contacter.');
-    });
-  </script>
-
-</body>
-</html>
+      <input type="email" placeholder="Votre 
