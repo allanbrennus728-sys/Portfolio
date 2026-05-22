@@ -9,6 +9,7 @@
       --bg: #050712; --bg-alt: rgba(11, 16, 32, 0.7); --text: #f5f5f5; --muted: #9ca3af;
       --primary: #22d3ee; --accent: #10b981; --border: rgba(31, 41, 51, 0.5);
       --radius: 12px; --shadow: 0 10px 30px rgba(0,0,0,0.5);
+      --highlight: rgba(16, 185, 129, 0.2); /* Couleur de surbrillance pour la carte E5 */
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -56,10 +57,39 @@
     .card ul { padding-left: 1.2rem; color: var(--muted); }
     .card li { margin-bottom: 0.4rem; font-size: 0.9rem; }
 
-    /* Styles ajoutés pour la carte cliquable */
+    /* Styles pour les cartes cliquables générales */
     .card-link { display: block; cursor: pointer; text-decoration: none; }
     .card-link .cta { margin-top: 1rem; color: var(--primary); font-weight: bold; transition: color 0.3s; }
     .card-link:hover .cta { color: var(--accent); }
+
+    /* Styles SPECIFIQUES pour la carte E5 (Design différent) */
+    .card-highlight { 
+      background: linear-gradient(145deg, rgba(11, 16, 32, 0.8), rgba(16, 185, 129, 0.1));
+      border: 1px solid var(--accent);
+      box-shadow: 0 4px 15px var(--highlight);
+      position: relative;
+      overflow: hidden;
+    }
+    .card-highlight::before {
+      content: 'OFFICIEL';
+      position: absolute;
+      top: 10px;
+      right: -25px;
+      background: var(--accent);
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 3px 30px;
+      transform: rotate(45deg);
+    }
+    .card-highlight:hover { 
+      transform: translateY(-8px) scale(1.02); 
+      border-color: var(--primary); 
+      box-shadow: 0 10px 25px rgba(34,211,238,0.3);
+    }
+    .card-highlight h3 { color: var(--primary); font-size: 1.2rem; }
+    .card-highlight p { color: var(--text); }
+    .card-highlight .cta { color: var(--accent); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.8rem; }
 
     .skill-label { font-size: 0.95rem; margin-bottom: 0.4rem; }
     .skill-bar { height: 10px; background: rgba(0,0,0,0.5); border-radius: 5px; overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border); }
@@ -140,8 +170,9 @@
   <!-- Compétences -->
   <div class="alt-bg" id="competences">
     <section class="section">
-      <h2>Mes Compétences</h2>
+      <h2>Mes Compétences & Bilan</h2>
       <div class="grid">
+        <!-- Colonne 1 : Compétences Techniques -->
         <div class="card">
           <div class="skill-label">Windows Server / Active Directory</div>
           <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
@@ -150,6 +181,8 @@
           <div class="skill-label">GLPI / Gestion de parc</div>
           <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
         </div>
+        
+        <!-- Colonne 2 : Autres Compétences -->
         <div class="card">
           <div class="skill-label">Linux (Debian/Ubuntu)</div>
           <div class="skill-bar"><div class="skill-fill" style="width:20%"></div></div>
@@ -158,6 +191,15 @@
           <div class="skill-label">HTML / Web</div>
           <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
         </div>
+        
+        <!-- CARTE CLIQUABLE DESIGN DIFFERENT : Tableau de Synthèse E5 -->
+        <a class="card card-link card-highlight" href="Epreuve-E5-BRENNUS-Allan.pdf" target="_blank" rel="noopener noreferrer">
+          <h3>📋 Tableau de Synthèse E5</h3>
+          <p>Récapitulatif officiel de l'ensemble de mes réalisations professionnelles et des compétences mises en œuvre durant ma formation.</p>
+          <p class="cta">Ouvrir la grille de compétences ➔</p>
+        </a>
+
+        <!-- Colonne 3 : Certifications -->
         <div class="card">
           <h3>Certifications</h3>
           <ul>
@@ -267,7 +309,7 @@
     </form>
     <p style="text-align:center; color:var(--muted);">
       📍 Saint-Marie, La Réunion (97438)<br>
-      📧 <a href="mailto:allan.brennus72@gmail.com">allan.brennus728@gmail.com</a> &bull; 📱 06 92 00 73 25
+      📧 <a href="mailto:allan.brennus728@gmail.com">allan.brennus728@gmail.com</a> &bull; 📱 06 92 00 73 25
     </p>
   </section>
 
