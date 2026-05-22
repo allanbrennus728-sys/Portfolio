@@ -261,4 +261,38 @@
     <h2>Me Contacter</h2>
     <form class="contact-form">
       <input type="text" placeholder="Votre nom" required>
-      <input type="email" placeholder="Votre 
+      <input type="email" placeholder="Votre email" required>
+      <textarea rows="5" placeholder="Votre message..." required></textarea>
+      <button type="submit" class="btn">Envoyer le message</button>
+    </form>
+    <p style="text-align:center; color:var(--muted);">
+      📍 Saint-Marie, La Réunion (97438)<br>
+      📧 <a href="mailto:allan.brennus72@gmail.com">allan.brennus72@gmail.com</a> &bull; 📱 06 92 00 73 25
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Allan Brennus &mdash; Portfolio BTS SIO SISR &bull; Saint-Denis, La Réunion</p>
+  </footer>
+
+  <script>
+    // Script pour le défilement fluide (smooth scroll)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Alerte formulaire de contact
+    document.querySelector('.contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Message envoyé ! Merci de me contacter.');
+    });
+  </script>
+
+</body>
+</html>
